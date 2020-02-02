@@ -4,4 +4,6 @@ services:
 
 before_install:
   - docker build -t ksm/docker-react -f Dockerfile.dev .
-  - docker run -e CI=true ksm/docker-react npm run test  
+
+script:
+  - docker run -e CI=true ksm/docker-react npm run test
